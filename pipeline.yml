@@ -1,0 +1,9 @@
+name: Apickli Shell Pipeline
+on: workflow_dispatch
+jobs:
+  example-project:
+    name: Example Project
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run in docker
+      uses: ./example-project
