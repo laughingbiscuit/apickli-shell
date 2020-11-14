@@ -5,5 +5,7 @@ jobs:
     name: Example Project
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
     - name: Run in docker
       uses: ./example-project
