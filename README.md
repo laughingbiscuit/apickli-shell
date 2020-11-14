@@ -1,5 +1,8 @@
 # Apickli Shell
 
+![pipeline](https://github.com/laughingbiscuit/apickli-shell/workflows/Apickli%20Shell%20Pipeline/badge.svg)
+
+
 ## Summary
 
 An apickli-style implementation of Cucumber for POSIX shell, with some useful 
@@ -18,6 +21,10 @@ in any POSIX shell. No more Ruby/Node/Java!
 ## Quick Start
 
 Just run `sh cucumber-sh` to stdout the converted Feature files as a test script. You can redirect this to a file `sh cucumber-sh > test.sh` and run it `sh test.sh`. Add the env variable `DEBUG=1` for verbose output.
+
+## Example
+
+See the [Feature](https://github.com/laughingbiscuit/apickli-shell/blob/main/example-project/features/Curl.feature) file, example generated [test script](https://github.com/laughingbiscuit/apickli-shell/blob/main/sample-test-output.sh) and CI [output](https://github.com/laughingbiscuit/apickli-shell/runs/1400907688?check_suite_focus=true) for a working example.
 
 ## Supported Steps
 
