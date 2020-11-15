@@ -45,7 +45,7 @@ Then result JSON <jq path> should not be <value> 	# requires jq
 ## Docker
 
 In the example, `docker` to ensure that the tests are repeatable on any machine.
-This can be considered a _Best Practice_ and is optional. Really, all we do is
+This can be considered a _Best Practice_ (particularly if you have complex dependencies or are writing to the filesystem) but is optional. Really, all we do is
 generate a shell script.
 
 ## Future Improvements
