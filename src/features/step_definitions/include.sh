@@ -8,3 +8,5 @@ set -e
 # If the $DEBUG flag is set, our custom code should be verbose
 [ ! -z "$DEBUG" ] && set -x
 echo "Debug state is: [$DEBUG]"
+
+trap '[ $? -ne 0 ] && echo "FAIL" || echo "PASS"' EXIT
