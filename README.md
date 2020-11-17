@@ -20,11 +20,35 @@ in any POSIX shell. No more Ruby/Node/Java!
 
 ## Quick Start
 
-Just run `sh cucumber-sh` to stdout the converted Feature files as a test script. You can redirect this to a file `sh cucumber-sh > test.sh` and run it `sh test.sh`. Add the env variable `DEBUG=1` for verbose output.
+Install the tool
+```
+git clone https://github.com/laughingbiscuit/apickli-shell
+export PATH=$PATH:$PWD/apickli-shell/bin
+# optionally add this to your .bashrc/.zshrc/.profile now
+```
 
-## Example
+Bootstrap your test project
 
-See the [Feature](https://github.com/laughingbiscuit/apickli-shell/blob/main/example-project/features/Curl.feature) file, example generated [test script](https://github.com/laughingbiscuit/apickli-shell/blob/main/sample-test-output.sh) and CI [output](https://github.com/laughingbiscuit/apickli-shell/runs/1400907688?check_suite_focus=true) for a working example.
+```
+mkdir $HOME/my-test-project
+cd $HOME/my-test-project
+apickli-shell-bootstrap
+```
+
+Run the tests
+```
+sh apickli.sh | sh
+```
+
+Debug the tests
+```
+DEBUG=1 sh apickli.sh | sh
+```
+
+View the generated script
+```
+sh apickli.sh > generated-script.sh
+```
 
 ## Supported Steps
 
@@ -43,9 +67,8 @@ Then result JSON <jq path> should not be <value> 	# requires jq
 
 ## Docker
 
-In the example, `docker` to ensure that the tests are repeatable on any machine.
-This can be considered a _Best Practice_ (particularly if you have complex dependencies or are writing to the filesystem) but is optional. Really, all we do is
-generate a shell script.
+Docker can be used to ensure that the tests are repeatable on any machine from a clean environment.
+This can be considered a _Best Practice_ (particularly if you have complex dependencies or are writing to the filesystem) but is optional. Really, all this tool does is generate a shell script.
 
 ## Future Improvements
 
