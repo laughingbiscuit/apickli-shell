@@ -1,0 +1,18 @@
+#!/bin/sh
+
+###
+# Apickli Bootstrap
+#
+# A tool to initialise an Apickli Shell Project
+#
+###
+
+set -e
+
+SCRIPT_PATH=$(dirname $(readlink -f "$0"))
+
+# Copy in the library files
+cp -r $SCRIPT_PATH/../src/* \
+  $PWD
+
+echo "Apickli Bootstrap Complete"

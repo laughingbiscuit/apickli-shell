@@ -31,7 +31,6 @@ See the [Feature](https://github.com/laughingbiscuit/apickli-shell/blob/main/exa
 ```
 Given I run command <command>
 Given I set variable <name> to <value>
-Given I write file <fixture> to <path>
 When I successfully run <command>
 When I fail to run <command>
 Then result contains <string>

@@ -16,10 +16,6 @@ s/\s*\(Given\|And\) I run \(.*\)/echo & \
 s/\s*\(Given\|And\) I set variable \(.*\) to \(.*\)/echo & \
 \2=\3/
 
-## Given I write file (fixture name) to (path)
-s/\s*\(Given\|And\) I write file \(.*\) to \(.*\)/echo & \
-cp $SCRIPTPATH\/features\/fixtures\/\2 \3/
-
 ## When I successfully run (cmd)
 s/\s*\(When\|And\) I successfully run \(.*\)/echo & \
 RESULT=$(\2)/

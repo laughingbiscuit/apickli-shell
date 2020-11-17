@@ -1,4 +1,0 @@
-name: Example Apickli Shell Docker Project
-runs:
-  using: "docker"
-  image: "Dockerfile"
